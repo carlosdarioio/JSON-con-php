@@ -1,0 +1,37 @@
+<html>	
+
+<body>
+<div id="contenido"></div>
+Ejemplo utilizando parse de Json con jquery
+
+<script>
+function escribir (msg){
+document.getElementById('contenido').innerHTML+=msg+"<br>";
+}
+//agregando datos
+var objetoJson = JSON.parse('{"nombre":"Mercy"}');
+
+console.log(objetoJson.nombre);
+
+var textoJson='{"teclado":15,"mouse":12,"usb":10}',precioConIva= function(producto,precio){
+if(producto=="mouse"){
+return undefined;
+}
+if(producto==""){
+return precio;
+}
+return precio+( precio * 0.16 );
+}, 
+//agregando texto json y texto desde una funcion co parse
+objectJson=JSON.parse(textoJson,precioConIva);
+console.log(objectJson);
+
+
+
+</script>
+
+
+</body>
+
+</html>	
+

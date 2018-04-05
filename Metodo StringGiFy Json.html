@@ -1,0 +1,35 @@
+<html>	
+
+<body>
+<div id="contenido"></div>
+Ejemplo utilizando stringify de Json con jquery
+
+<script>
+function escribir (msg){
+document.getElementById('contenido').innerHTML+=msg+"<br>";
+}
+
+var objetoJavascript = {"nombre":"HD", 
+						"Apellido":"Gomez",
+						"edad":21}, 
+	filtro = function(clave, valor){
+	if (clave=="Apellido"){
+	return undefined;
+	}
+	if(clave=="edad"){
+	return undefined;
+	}
+	return valor;
+	}
+							//mostrando el filtro elegido de doa manera especificando manual: ["nombre","edad"] o con la funcion filtro
+    textoJson=JSON.stringify(objetoJavascript,filtro);
+
+console.log(textoJson);
+	
+</script>
+
+
+</body>
+
+</html>	
+
